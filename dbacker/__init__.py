@@ -7,10 +7,10 @@ import dropbox
 
 class DBacker(object):
 
-    def __init__(self, app_key, app_secret):
+    def __init__(self, base_dir, app_key, app_secret):
         super(DBacker, self).__init__()
         self.providers = {}
-        self.token_file = '.dropbox'
+        self.token_file = os.path.join(base_dir, '.dropbox')
 
         self.app_key = app_key
         self.app_secret = app_secret
