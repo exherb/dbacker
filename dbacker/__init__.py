@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding=utf-8
 
+import os
+
 import dropbox
 
 class DBacker(object):
@@ -46,4 +48,8 @@ class DBacker(object):
     def backup(self):
         for provider_name, provider in self.providers.iteritems():
             file_path = provider.backup()
-            self.api_client.put_file('/' + provider_name, open(file_path, 'rb'), overwrite = True)
+            try:
+                self.api_client.put_file('/' + provider_name, open(file_path, 'rb'), overwrite = True)
+            finally:
+                os.remove(file_path)
+
