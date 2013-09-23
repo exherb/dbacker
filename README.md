@@ -1,4 +1,11 @@
-dropbox-backup
-==============
+# dropbox-backup
 
-using dropbox to backup database
+use dropbox to backup database
+
+## usage
+
+```bash
+cp config.sample.py
+vi config.py
+python dbacker.py
+```
