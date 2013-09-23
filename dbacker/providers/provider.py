@@ -49,7 +49,10 @@ class Provider(object):
                     shutil.rmtree(tmp_file_path)
                 tmp_file_path = ziped_tmp_file_path
         except Exception, e:
-            os.remove(tmp_file_path)
+            if os.path.isdir(tmp_file_path):
+                shutil.rmtree(tmp_file_path)
+            else:
+                os.remove(tmp_file_path)
             raise e
 
         return tmp_file_path
