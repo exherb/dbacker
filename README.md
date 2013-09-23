@@ -2,6 +2,12 @@
 
 use dropbox to backup database
 
+## supported database
+
+* postgresql
+* mongodb (requirements: mongodb-clients)
+* ...
+
 ## usage
 
 ```bash
