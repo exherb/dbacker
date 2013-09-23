@@ -8,9 +8,10 @@ use dropbox to backup database
 * mongodb (requirements: mongodb-clients)
 * ...
 
-## usage
+## usage (first time)
 
 ```bash
+pip install dropbox
 cp config.sample.py
 vi config.py
 python dbacker.py
