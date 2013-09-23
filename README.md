@@ -20,7 +20,7 @@ python dbacker.py
 ## cron
 
 ```
-0 * * * * "python :path/dbacker.py" # every hour
+0 * * * * python :path/dbacker.py # every hour
 ```
 
 ## todo
