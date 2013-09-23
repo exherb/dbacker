@@ -47,9 +47,11 @@ class DBacker(object):
 
     def backup(self):
         for provider_name, provider in self.providers.iteritems():
+            print('backuping {0} with {1}...'.format(provider_name, str(provider.__class__.__name__)))
             file_path = provider.backup()
             try:
                 self.api_client.put_file('/' + provider_name, open(file_path, 'rb'), overwrite = True)
             finally:
                 os.remove(file_path)
+        print('backup complete.')
 
