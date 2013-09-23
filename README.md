@@ -22,3 +22,9 @@ python dbacker.py
 ```
 0 * * * * "python :path/dbacker.py" # every hour
 ```
+
+## todo
+
+* add more database support
+* add more cloud storage support
+* restore cli
