@@ -1,22 +1,26 @@
 #!/usr/bin/env python
 # coding=utf-8
 
+dropbox = {
+    'key': '',
+    'sec': ''
+}
+
 databases = {
-    'mongodb': {
+    'db1': {
         'provider': 'mongodb',
-        'database': 'mongodb',
-        'user': 'mongodb',
-        'password': 'mongodb',
+        'database': '',
+        'user': '',
+        'password': '',
         'host': 'localhost',
         'port': 27017
     },
-    'postgresql': {
+    'db2': {
         'provider': 'postgresql',
-        'user': 'postgres',
-        'password': 'postgres',
-        'database': 'postgres',
+        'user': '',
+        'password': '',
+        'database': '',
         'host': 'localhost',
         'port': 5432
     }
 }
-

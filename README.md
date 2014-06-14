@@ -4,15 +4,15 @@ use dropbox to backup database
 
 ## supported database
 
-* postgresql
+* postgresql (requirements: postgresql-clients)
 * mongodb (requirements: mongodb-clients)
 * ...
 
-## usage (first time)
+## usage
 
 ```bash
-pip install dropbox
-cp config.sample.py
+pip install -r requirements.txt
+cp config.sample.py config.py
 vi config.py
 python dbacker.py
 ```
